@@ -1,0 +1,731 @@
+feature {
+  name: "Company"
+  type: BYTES
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Company public response"
+  type: BYTES
+  domain: "Company public response"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "Company response to consumer"
+  type: BYTES
+  domain: "Company response to consumer"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Complaint ID"
+  type: INT
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Consumer complaint narrative"
+  type: BYTES
+  domain: "Consumer complaint narrative"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "Consumer consent provided?"
+  type: BYTES
+  domain: "Consumer consent provided?"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "Consumer disputed?"
+  type: BYTES
+  domain: "Consumer disputed?"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Date received"
+  type: BYTES
+  domain: "Date received"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Date sent to company"
+  type: BYTES
+  domain: "Date sent to company"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Issue"
+  type: BYTES
+  domain: "Issue"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Product"
+  type: BYTES
+  domain: "Product"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "State"
+  type: BYTES
+  domain: "State"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "Sub-issue"
+  type: BYTES
+  domain: "Sub-issue"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "Sub-product"
+  type: BYTES
+  domain: "Sub-product"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Submitted via"
+  type: BYTES
+  domain: "Submitted via"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "Tags"
+  type: BYTES
+  domain: "Tags"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+}
+feature {
+  name: "Timely response?"
+  type: BYTES
+  domain: "Timely response?"
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+feature {
+  name: "ZIP code"
+  type: BYTES
+  presence {
+    min_fraction: 1.0
+    min_count: 1
+  }
+  shape {
+    dim {
+      size: 1
+    }
+  }
+}
+string_domain {
+  name: "Company public response"
+  value: "Company believes complaint caused principally by actions of third party outside the control or direction of the company"
+  value: "Company believes complaint represents an opportunity for improvement to better serve consumers"
+  value: "Company believes it acted appropriately as authorized by contract or law"
+  value: "Company believes the complaint provided an opportunity to answer consumer\'s questions"
+  value: "Company disputes the facts presented in the complaint"
+  value: "Company has responded to the consumer and the CFPB and chooses not to provide a public response"
+}
+string_domain {
+  name: "Company response to consumer"
+  value: "Closed with explanation"
+  value: "Closed with monetary relief"
+  value: "Closed with non-monetary relief"
+  value: "In progress"
+  value: "Untimely response"
+}
+string_domain {
+  name: "Consumer complaint narrative"
+  value: "\" The Fair Credit Reporting Act ( 15 U.S. Code 1681 ) says ( 1 ) The banking system is dependent upon fair and accurate credit reporting. Inaccurate credit reports directly impair the efficiency of the banking system, and unfair credit reporting methods undermine the public confidence, which is essential to the continued functioning of the banking system.\n\nSo whenever there is a violation under the FCRA, it impairs the efficiency of the banking system. This is a violation of my privacy with my consumer report, since I control what is listed and what is not. In the event that any accounts are reported without my written consent, that is considered identity theft.\n\nThis is a violation of both 15 U.S. Code 1681b ( 2 ) and 15 U.S. Code 1681c-2. This leads way to civil liability against the credit reporting agency for negligent and willful noncompliance under 15 U.S. Code 1681n, which allows for {$1000.00} per violation, for each account listed without my expressed written consent.\n\nI looked at my consumer reports and noticed accounts I never gave anyone permission to report. Consumer reporting agencies have assumed a vital role and have a responsibility to report consumer information to the best of their ability with maximum possible accuracy like the Fair Credit Reporting Act clearly states. I did not provide written consent to report them. \'\'"
+  value: "# XXXX XXXX XXXX XXXX XXXX Reported : XXXX. XXXX, XXXX - {$810.00} Needs Attention Overview You have 100 % left to pay on this collection. \n\nXXXX {$810.00} XXXX XXXX {$810.00} Opened XXXX. XXXX, XXXX ( XXXX yrs, XXXX mos ) Account status Open Type Derogatory Responsibility Individual Remarks Placed for collection Account information disputed by consumer Account information disputed by consumer Original Creditor Name XXXX XXXX XXXX XXXX XXXX Closed No Info # XXXX XXXX XXXX XXXX Reported : XXXX. XXXX, XXXX - {$1300.00} Needs Attention Overview You have 100 % left to pay on this collection. \n\nBalance {$1300.00} Highest Balance {$1300.00} Opened XX/XX/XXXX ( XXXX mos ) Account status Open Type Derogatory Responsibility Individual Remarks Placed for collection Account information disputed by consumer Account information disputed by consumer Original Creditor Name XXXX XXXX XXXX XXXX Closed No Info # XXXX XXXX XXXX XXXX Reported : XXXX. XXXX, XXXX - {$1100.00} Needs Attention Overview You have 100 % left to pay on this collection. \n\nBalance {$1100.00} Highest Balance {$1100.00} Opened XX/XX/XXXX ( XXXX mos ) Account status Open Type Derogatory Responsibility Individual Remarks Placed for collection Account information disputed by consumer Account information disputed by consumer Original Creditor Name XXXXXXXX XXXX XXXX XXXX  Closed No Info # XXXX XXXX XXXX XXXX XXXX Reported : XXXX XXXX, XXXX - {$950.00} Needs Attention Overview You have 100 % left to pay on this collection. \n\nBalance {$950.00} Highest Balance {$950.00} Opened XXXX XXXX, XXXX ( XXXX mos ) Account status Open Type Derogatory Responsibility Individual Remarks Placed for collection Account information disputed by consumer Account information disputed by consumer Original Creditor Name XXXX XXXX XXXX  Closed No Info # XXXX XXXX XXXX XXXX XXXX Reported : XXXX XXXX, XXXX - {$810.00} Needs Attention Overview You have 100 % left to pay on this collection. \n\nBalance {$810.00} Highest Balance {$810.00} Opened XXXX XXXX, XXXX ( XXXX yrs, XXXX mos ) Account status Open Type Derogatory Responsibility Individual Remarks Placed for collection Account information disputed by consumer Account information disputed by consumer Original Creditor Name XXXXXXXX XXXX Closed No Info # XXXX XXXX XXXX XXXX Reported : XXXX XXXX, XXXX - {$940.00} Needs Attention Overview You have 100 % left to pay on this collection. \n\nBalance {$940.00} Highest Balance {$940.00} Opened XXXX XXXX, XXXX ( XXXX yrs, XXXX mos ) Account status Open Type Derogatory Responsibility Individual Remarks Placed for collection Account information disputed by consumer Account information disputed by consumer Original Creditor Name XXXX  XXXXXXXX XXXX XXXX Closed No Info XXXX XXXX XXXXXXXX XXXX XXXX Reported : XXXX XXXX, XXXX - {$490.00} Needs Attention Overview You have 100 % left to pay on this collection. \n\nXXXX {$490.00} XXXX XXXX {$490.00} Opened XXXX. XXXX, XXXX ( XXXX mos ) Account status Open Type Derogatory Responsibility Individual Remarks Placed for collection Account information disputed by consumer Account information disputed by consumer Original Creditor Name XXXX XXXX XXXX XXXX XXXX Closed No Info # XXXX XXXX XXXX XXXX Reported : XXXX XXXX, XXXX - {$730.00} Needs Attention Overview You have 100 % left to pay on this collection. \n\nBalance {$730.00} Highest Balance {$730.00} Opened XXXX XXXX, XXXX ( XXXX mos ) Account status Open Type Derogatory Responsibility Individual Remarks Placed for collection Placed for collection Original Creditor Name XXXX XXXX XXXX Closed No Info"
+  value: "AI kindly request that the XXXX points erroneously removed from my credit report be reinstated as soon as possible. Their absence is significantly impacting my financial situation and causing undue hardship in my life."
+  value: "As per the guidance from the Consumer Financial Protection Bureau ( CFPB ) the documents needed are picture ID, a bill and a letter helping me due to XXXX  XXXX XXXX XXXX, which falls under XXXX  according to XXXX-Debt Final Rule 1002.142 ( b ) ( 4 ) -5 -- 1002.142 ( b ) ( 7 ). I kindly request that you block this information from my credit report within four business days, pursuant to section 605C of the Fair Credit Reporting Act. I have given you my identification as well as the information requested from the list of acceptable items of which only 2 are required per the law. I have provided all needed documentation as well as a victim determination letter according to 1022.142 ( b ) ( 6 )."
+  value: "Bank of America XXXX : XXXX Department XXXX XXXX XXXX XXXX XXXX XXXX Subject : Dispute of Fraudulent Account ( s ) Due to Identity Theft Acct # XXXX To Whom It May Concern, I am writing to report that I am a victim of identity theft, and fraudulent activity has occurred under my name involving Bank of America . I did not open, authorize, or have any knowledge of the account ( s ) or transactions that have been reported under my identity.\n\nThis fraudulent activity has damaged my banking history and is preventing me from opening a legitimate account. I request that Bank of America thoroughly investigate the situation and remove any unauthorized accounts or transactions linked to my name or Social Security number.\n\nPlease consider this letter a formal dispute and request for Full investigation into any account ( s ) opened fraudulently in my name.\n\nRemoval of all fraudulent information from your records.\n\nWritten confirmation that I am not responsible for these accounts. \nNotice to XXXX and any relevant reporting agencies to clear my name. I was incarcerated when this occurred"
+  value: "CFPB Identity Theft Dispute Statement I am submitting this statement to formally report that I have been a victim of identity theft. As a result, there are fraudulent accounts and/or inquiries on my credit report that I did not authorize or open. I am exercising my rights under the Fair Credit Reporting Act ( XXXX  ) and requesting that these items be investigated, verified, and removed immediately. \n\n\n\nDetails of the Dispute : I am disputing the following information that appears on my credit report, which I believe to be the result of identity theft : XXXX XXXX XXXX account for {$100.00} XXXX Bank XXXX account, {$4100.00} past due XXXX XXXX XXXX credit card XXXX {$1800.00} past due XXXX ( Acct ending in XXXX XXXX Charged-off credit card, {$630.00} past due XXXX ( Acct ending in XXXX ) Charged-off credit card, {$3100.00} past due XXXX XXXX XXXX {$240.00} written off Any additional inquiries or accounts tied to these tradelines These accounts were fraudulently opened or misreported and do not belong to me. I have not given anyone permission to open or use these accounts on my behalf. \n\n\n\nFormal Request for Investigation and Debt Verification : Under FCRA XXXX ( XXXX U.S.C. XXXX ), I request that the credit reporting agencies immediately block and delete these fraudulent items from my report. \n\nUnder FCRA XXXX ( XXXX XXXX. XXXX ), I am formally requesting debt verification for all disputed accounts. Credit bureaus and furnishers must provide documented proof such as signed applications or agreements showing that I authorized these accounts. If such documentation can not be produced, the accounts must be permanently deleted from my credit file. \n\n\n\nCompensation for False Verification : As stated in FCRA XXXX ( XXXX XXXX. XXXX ), I am entitled to statutory damages of {$1000.00} per violation if any disputed account is falsely verified as accurate despite my identity theft claim. \n\n\n\nSupporting Documentation : I have included : A copy of my identity theft report ( police report or FTC Identity Theft Affidavit ) & Police Report. \nA copy of my government-issued ID Requested Actions : XXXX. Immediate blocking and removal of all fraudulent accounts and inquiries XXXX. Debt verification for all disputed accounts XXXX. Written confirmation that the fraudulent items have been deleted XXXX. Proof that all furnishers were notified to cease reporting unverifiable data XXXX. An updated copy of my credit report showing these corrections I expect written confirmation that my dispute has been handled in accordance with the FCRA. Failure to comply will result in additional legal and regulatory actions."
+  value: "Consumer Reporting Agencies play a crucial role in gathering and assessing consumer credit information. However, they must exercise their responsibilities with fairness, impartiality, and respect for the consumers right to privacy. The banking system relies on accurate and fair credit reporting, and when these reporting methods are unfair, it undermines public trust, which is vital for the system \'s stability. I never gave my explicit, written consent for these agencies to report my information, which is a violation of 15 U.S. Code 1681b ( 2 ). This violation has led to an alleged case of identity theft, breaching 15 U.S. Code 1681c-2. The accounts in question are not related to any transactions made by me.\n\nThe Fair Debt Collection Practices Act was created to ensure that laws and procedures are in place to protect consumers from abusive, deceptive, and unfair practices by debt collectors. In this case, the company has violated 15 U.S. Code 1692f, which prohibits debt collectors from using unfair or unconscionable means to collect a debt. Specifically, they can not collect any amounts that arent explicitly authorized by the agreement or allowed by law. Additionally, the company has violated 15 U.S. Code 1692e, which prohibits the use of false, deceptive, or misleading representations in debt collection efforts. This includes using deceptive methods to collect a debt or gather consumer information. Moreover, they are forbidden from contacting consumers at inconvenient times or places, or engaging in behavior that harasses or abuses consumers.\n\nIn this case, the company has harassed me by claiming I owe a debt that I do not recognize as my responsibility. They have also contacted me at inconvenient times and places, in violation of the law. \nI request that you promptly verify or remove the following account : XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX This collection account violates the Fair Debt Collection Practices Act ( 15 U.S.C. 1692g ) and the Fair Credit Reporting Act ( 15 U.S.C. 1681 ), as it has not been properly validated ; failure to remove it will result in legal action for non-compliance with federal law. - I have no recollection of this account. Please investigate and remove from my credit report.\n\nIncorrect Address - XXXX XXXX XXXX XXXX XXXX, MS , XXXX Incorrect Address - XXXX XXXX XXXX XXXX XXXX, XXXX, MS , XXXX EMPLOYER - XXXX XXXX EMPLOYER - XXXX XXXX"
+  value: "Credit management company keeps restarting an old medical debt from XXXX. It is now XXXX and should have fallen off. But because they keep \" renaming \'\' it, it starts as a new collection when it is not. They also put the balance on my file in collection multiple times for the same amount. I settled these XXXX bills in the medical facility in XXXX for a lower amount. I obviously do not still have those records. I asked for them to provide proof that they billed through my insurance, and itemized bill, I provided cards to them at the XXXX  at time of service ( I had full coverage and should not have had a bill at all ). They have yet after multiple requests to do so. \n** I asked for the original bill/service date/procedures done/charges/and what my insurance SPECIFICALLY didn\'t cover for them to requests money at all.. IT WAS NEVER GIVEN. Not only was it settled, it\'s medical, and repeating the same amount multiple times on the same report, but it\'s original charge was 9 years ago- They continue to restart the clock. PLEASE EASE help is consumers that are doing the right thing get these ridiculous companies off our report. AND charge them for false and repetitive reporting!!!"
+  value: "Date XXXX XXXX XXXX XXXX XXXX XXXX Subject : XXXX Identity Theft Dispute Request to Investigate, Block, and Delete Inaccurate Accounts To Whom It May Concern, I am a victim of identity theft and am writing to dispute and request the immediate investigation, blocking, and deletion of the inaccurate and fraudulent information listed on my credit report. Under the Fair Credit Reporting Act ( FCRA ), particularly Sections 609, 611, 623, and 605B, I am exercising my rights to dispute, block, and have inaccurate information removed from my report that I did not authorize.\n\nThis inaccurate reporting has caused significant financial hardship on me and my family and has interfered with important financial goals, including my attempt to refinance my vehicle.\n\n-- - The following accounts were NOT authorized by me and should be investigated, blocked, and permanently deleted from my credit report : XXXX. XXXX ( XXXX XXXX XXXX Account XXXX  : XXXX Status : Closed Late 60 Days Past Due : {$160.00} Balance : {$1700.00} Last Reported : XX/XX/year> This account shows inaccurate late payments, was not authorized by me, and must be removed. \n\n\nXXXX XXXX XXXX XXXX XXXXXXXX Account XXXX XXXX XXXX Status : Collection/Charge-off Balance : {$770.00} Last Reported : XX/XX/year> First payment was never made because this account was not initiated by me. \n\n\nXXXX. XXXX XXXX XXXX XXXX XXXX Account XXXX XXXX XXXX Status : Closed Balance : {$8700.00} Last Reported : XX/XX/year> Though this account is reported as current and closed, it was not authorized and should be removed to avoid further impact. \n\n\n\n\nXXXX XXXX In accordance with FCRA Section 605B, I demand that you block and delete these accounts within four business days of receiving this dispute and supporting documentation. I am attaching a copy of my government-issued ID, Social Security card , and a utility bill as proof of identity, along with an Identity Theft Report filed with the FTC ( or indicate if you\'re including a police report or FTC affidavit ).\n\nPlease send written confirmation once these accounts are removed. Failure to comply will result in a formal complaint to the Consumer Financial Protection Bureau ( CFPB ) and may result in legal action. \n\nSincerely, XXXX XXXX [ Signature if mailing ] XXXX XXXX"
+  value: "Finding unauthorized accounts, credit inquiries, and false personal information made or reported without my knowledge or agreement completely stunned and grieved me. I\'ve tried to get clarification from the creditors, but they have blatantly refused to give it to me. I demand that the creditors act immediately and be transparent. The creditors must submit pertinent application materials, show proof of express authority for each query, and give comprehensive details about each account and inquiry, including dates, purposes, and the kinds of credit products involved. To see what I\'m complaining about, please refer to the attached file!"
+  value: "First of all, I never received any email or official notification from XXXX regarding an outstanding bill. After switching from XXXX, I proactively called their customer service multiple times requesting a breakdown of the charges and to confirm whether I owed anything. Despite my repeated requests, XXXX never provided the details. \n\nUnexpectedly, I received a call from AmSher Collections demanding payment and speaking to me in a rude and aggressive manner. While they later offered a reduced settlement amount, I continued requesting a detailed bill from XXXX XXXX XXXX I was also responsible for others on the same XXXX  account. \n\nAs of today, XXXX has still not provided any billing breakdown. \n\nI called XXXX again on Monday morning, XX/XX/XXXX, exhausted from the back and forth, and considered paying the settlement amount just to protect my credit. I explained that I had been unable to follow up earlier due to a death in the family and travel abroad, and I was even willing to provide proof of this. Instead, I was told that the account had already been reported to credit bureaus, and I would need to pay the full amount to avoid further damage. \n\nI paid the full amount, yet my credit report and score have already been seriously impacted. XXXX still has not assisted me with the bill breakdown. Every time I contact them, they redirect me to AmSher, and AmSher sends me back to XXXX. The entire process has been frustrating, with poor communication and at times, verbal mistreatment. \n\nI have attached a photo and bill all they provided me after multiple visits to store and even that doesnt help me with breakdown"
+  value: "Fraudulent accounts were opened in my name without my consent as a result of being a victim of XXXX XXXX. These accounts include auto loans, credit cards, and collection accounts from various financial institutions. I was coerced into financial arrangements that I could not control, resulting in adverse entries on my credit report. Upon escaping the XXXX  situation, I discovered multiple unauthorized debts negatively impacting my credit. On [ specific date ], I contacted the credit bureaus to dispute these accounts and began the process of clearing my credit profile. I also worked with XXXX XXXX, a federally recognized organization assisting survivors of XXXX XXXX, to verify my victim status and obtain supporting documentation. Despite my efforts, the disputed accounts have not been fully removed or corrected. On I filed an identity theft report with the Federal Trade Commission ( FTC ) and submitted documentation to TransUnion requesting the removal of fraudulent accounts under 12 C.F.R. 1022.142. Additionally, I requested copies of all account statements and evidence of debt legitimacy from the creditors involved. As of now, the following unresolved fraudulent accounts continue to affect me : XXXX XXXX XXXX ( Account # XXXX XXXX XXXX XXXX XXXX  ) - Opened on XX/XX/XXXX with a balance of XXXX XXXXXXXX XXXX XXXX ( Account XXXX XXXXXXXX XXXX XXXX XXXX XXXX ) - Opened on XX/XX/XXXX with a balance of {$1.00}. XXXX XXXX XXXX XXXX ( Account # XXXXXXXX XXXX XXXX XXXX XXXX ) - Opened on XX/XX/XXXX witha balance of $ XXXX XXXX XXXX XXXX ( Account # XXXXXXXX XXXX XXXX XXXX XXXX ) - Opened on XX/XX/XXXX witha balance of $ XXXX XXXX XXXX XXXX  ( Account # XXXX XXXX XXXX XXXX XXXX ) - Opened on XX/XX/XXXX with a balance of XXXX XXXX XXXX XXXX XXXX ( Account XXXX XXXXXXXX XXXX XXXX XXXX XXXX  ) - Opened on XX/XX/XXXX with a balance of XXXX  XXXX XXXX XXXX XXXX ( Account # XXXX XXXX XXXX XXXX XXXX ) - Opened on XX/XX/XXXX with a balance of XXXX  XXXX XXXXXXXX XXXX XXXX ( Account # XXXXXXXX XXXX XXXX XXXX XXXX ) - Opened on XX/XX/XXXX with a balance of XXXX XXXX.These fraudulent accounts have severely impacted my credit, preventing me from obtaining housing, employment, and financial services. I am requesting the CFPB to facilitate the immediate removal of these accounts and to ensure compliance with regulations protecting victims of XXXX XXXX. Thank you for your attention to this matter and for supporting survivors like myself in regaining financial stability."
+  value: "Hello. For years I have been fighting with XXXX XXXX XXXX XXXX about late payments over several accounts. For years they have promised to fix it, and for years they have failed to do so. \n\nI understand that going back years and giving details about every single time I have spoken to them is impractical. Suffice it to say that XXXX XXXX and I have been doing this dance for numerous years. I can prove this to you by providing a couple of letters I have received from XXXX XXXX stating they would remove late payments, but they never do. Please understand that I have received numerous of these letters for multiple accounts, but I will provide you with only XXXX to show that it has been going on for years with XXXX XXXX admitting to making mistakes and never fixing them. \n\nI guess to say they never do would be unfair. They partially remove late payments, but never completely. What I mean by that is that when I view my credit report, I see late payments that are removed from XXXX bureau, but not the other XXXX, or for another account I will see the late payment removed from XXXX bureaus, but not the third. \n\nThis has been going on so many times over so many years across so many accounts that at this point it is nothing but incompetence or negligence on XXXX XXXX \'s part. To be specific, XXXX XXXX has admitted many times to me by phone and in writing that their claim my payments were not on time were errors on their behalf. That\'s why they have given me letters many different times. The problem is that it keeps happening over and over. No matter how many times they catch their mistake, they keep misreporting that I pay late when I don\'t. \n\nI have spent numerous hours with them over the years about this situation that I am totally fed up. I have disputed these late payments with the credit bureaus for years only to once again have partial corrections made and not complete corrections or late payment removals. This has been affecting me for so many years that this is the last straw for me. If this complaint does not get XXXX XXXX or the credit bureaus to remove the late payments from all the accounts I have with XXXX XXXX at once, I am going to simply sue XXXX XXXX and possibly even the credit bureaus. \n\nI want the XXXX XXXXXXXX XXXX XXXX  as well as the XXXX XXXX auto loan to have all late payments removed at once or I will file this with small claims and also with the XXXX"
+  value: "I affirm that the inclusion of incorrectly reported late payment remarks on my accounts is a breach of the 15 USC 1666. Every payment linked to these accounts has been promptly made, and any departure from this precise reporting is unjust and unlawful."
+  value: "I am disputing inaccuracies on my credit report and requesting the immediate removal of specific accounts and items. These inaccuracies include unauthorized negative entries, incorrect addresses, and hard inquiries reported without my consent. These actions violate the Fair Credit Reporting Act ( FCRA ) and the Fair and Accurate Credit Transactions Act ( FACTA ), particularly 15 U.S.C. 1681c-2, which requires consumer reporting agencies to block or delete information reported without written consent. You have failed to ensure maximum possible accuracy, as required under 15 U.S.C. 1681e ( b ). The reporting of unauthorized data also breaches 15 U.S.C. 1681b, which governs permissible purposes for obtaining and reporting consumer data. The inaccuracies have caused harm to my creditworthiness, and despite providing documentation, these errors remain uncorrected."
+  value: "I am filing a complaint against Equifax for failing to properly investigate my disputes regarding inaccuracies in my credit report. \nDespite my submissions, Equifax consistently responds within 24 hours stating the account is accurate, without providing any evidence of a thorough investigation.\n\nThis practice violates the Fair Credit Reporting Act ( FCRA ), 15 U.S.C. 1681i, which mandates a reasonable investigation of disputes. Furthermore, Equifax \'s actions may also contravene the Consumer Financial Protection Act ( CFPA ), 12 U.S.C.\n\n5536 ( a ) ( 1 ) ( A ) - ( B ), as highlighted in the CFPB \'s recent administrative proceeding ( File No. 2025-CFPB-0002 ) against them for similar violations. I request that the CFPB take action to ensure Equifax complies with federal law and provides consumers with the necessary proof of investigation. \n\nXXXX XXXX {$1000.00} XXXX {$550.00} XXXX XXXX XXXX {$5200.00} XXXX XXXX XXXX XXXX XXXX original creditor : XXXX XXXX XXXX XXXX XXXX XXXX ) {$600.00}"
+  value: "I am filing a complaint against XXXX for failing to propery investigate my disputes regarding inaccuracies in my credit report. \nDespite my submissions, XXXX consistently responds within 24 hours stating the account is accurate, without providing any evidence of a thorough investigation.\n\nThis practice violates the Fair Credit Reporting Act ( FCRA ), 15 U.S.C. 1681i, which mandates a reasonable investigation of disputes."
+  value: "I am filing this FTC Identity Theft Affidavit to report a fraudulent account appearing on my consumer FICO credit report which I do not recognize as reported and which are the result of identity theft and fraud. These fraudulent accounts consist of a XXXX XXXX XXXX  account opened at XXXX XXXX {$300.00} # XXXX opened XXXX, XXXX XXXX {$16000.00} # XXXX opened 1-25-2020.These accounts have resulted in a fraudulent accounts appearing on my consumer FICO credit report. I demand that the aforementioned fraudulent items be removed from each of my consumer credit reports and that all collection activity related to said items cease pursuant to my rights within the FCRA and FDCPA laws. CFPB Complaint against Credit Reporting Agency Experian Consumer Name : XXXX XXXX XXXX Consumer Social Security Number XXXX Consumer Date of Birth : XXXX Contents of Complaint : This CFPB complaint has been filed to request pursuant to FCRA 605B ( 15 U.S.C. 1681c-2 ) that you, the E xperian eporting agency, block information appearing on my consumer credit report that is the result of identity theft and fraud within 4 business days of you receiving this complaint. This fraudulent, inaccurate, account have resulted in an account appearing on my consumer FICO credit report. I\'ve attached a list of the hard inquiries in question as well as a copy of the consumer FICO credit report maintained by you which shows the aforementioned fraudulent item. I do not recognize the aforementioned accounts, collections as reported. The aforementioned accounts, collections appearing on my consumer credit report maintained by you were not opened, made, or initiated by me. All of the aforementioned accounts, collections are the result of identity theft and fraud. I have attached a copy of FTC Identity Theft Criminal Complaint as proof from the XXXX Federal Trade Commission that all of the aforementioned consumer credit accounts, collections, and hard inquiries are the result of identity theft and fraud. What would be a fair resolution to this issue? ( demand for relief ) : I request, pursuant to FCRA 605B ( 15 U.S.C. 1681c-2 ), that the Experian credit reporting agency block all of the accounts, collections identified in this CFPB complaint from my consumer credit file within 4 business days of receiving said complaint. I request that all written confirmation regarding this CFPB complaint be sent to me via email to the email address XXXX XXXX"
+  value: "I am filing this report with the CFPB to formally dispute several unauthorized accounts listed on my credit report. I am a victim of identity theft and request that these accounts be blocked from my credit file under Section 605B of the Fair Credit Reporting Act ( FCRA ) .According to this law, you are required to block fraudulent information on a consumer \'s credit report within four ( 4 ) business days after receiving appropriate documentation. My personal information was exposed in the EQUIFAX DATA BREACH. PLEASE REFER TO THE EQUIFAX DATA BREACH SETTLEMENT REFERENCE NUMBER TO VERIFY MY VICTIMIZATION specifically 15 USC 16821c-2 ( a ). I am entitled to request that my accounts be blocked and deleted due to the unauthorized access to m personal information. The breach has compromised my data and I am concerned about the identity theft and misuse of my information. Please find my details below for your reference. Full Name : XXXX XXXX Social Security Number : SS # XXXX Date of Birth : XX/XX/scrub>XXXX  Current Address : XXXX XXXX XXXX XXXX XXXX Arizona XXXX. I kindly request that you take immediate action to block and delete all accounts that have been compromised as a result of this data breach. Additional, please provide me with written confirmation once this has been completed. If you require any further information or documentation to process my request, please do not hesitate to contact me at the phone number or email address listed above. Thank you for your prompt attention to this matter. I look forward to your swift response."
+  value: "I am formally exercising my rights under the Fair Credit Reporting Act ( FCRA ) and the Fair and Accurate Credit Transactions Act ( FACTA ) to dispute and demand the immediate removal of the following inquiries from my credit file. These inquiries were either made without my full authorization, were not adequately explained to me at the time of application or have not been verified to my satisfaction. \n\nInquiries to Be Deleted Immediately : XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXXXX/XX/XXXX Let me be clearaccording to Section 604 of the FCRA, you are prohibited from reporting any inquiry unless you can produce full documentation proving that I gave written authorization for each specific instance. Simply stating that the inquiry is permissible or initiated by the consumer is not adequate verification under federal law. \n\nI am requesting : Proof of permissible purpose for each inquiry listed above. \n\nA copy of the original signed authorization that explicitly allowed the pull of my credit report. \n\nImmediate deletion of any inquiry that can not be fully verified with supporting documentation. \n\nYou have 30 days from receipt of this letter to complete your investigation and provide written confirmation of the outcome. If you can not comply, you are required by law to delete the disputed information from my credit file under FCRA guidelines. \n\nFailure to fully comply will result in the immediate filing of formal complaints with the Consumer Financial Protection Bureau ( CFPB ), the Federal Trade Commission ( FTC ), and the Attorney Generals Office in my state, as well as potential civil legal action for willful noncompliance. \n\nThis letter serves as your final notice. I expect full compliance without delay."
+  value: "I am listing accounts and inquiries below that have been reported inaccurately on my credit report. In compliance with the Fair Credit Reporting Act and as a gesture of respect to the Federal Trade Commission Committee on accuracy and completeness of credit information I am formally writing in today to dispute negative information appearing on my credit. This incorrect information is greatly hindering me from getting the credit score I deserve and hopefully, this letter will resolve all the issues on my credit.\n\nI demand to see Verifiable Proof ( an original Consumer Contract with my Signature on it ) of the accounts listed below. Your failure to positively verify these accounts and inquiries has hurt my ability to obtain credit. \n\nItems that need attention :"
+  value: "I am reporting identity theft resulting in both a fraudulent account and multiple unauthorized hard inquiries on my credit reports. \n\nFraudulent Account : A XXXX XXXX  credit card account was opened without my knowledge or consent and is being reported as charged off with a {$1300.00} balance and a {$1000.00} credit limit. The account was opened around XX/XX/XXXX, and last reported on XX/XX/XXXX. I did not open this account. It is currently appearing as a derogatory account on my XXXX  and TransUnion reports. \n\nUnauthorized Inquiries : On XX/XX/XXXX, multiple hard inquiries appeared on my credit reports from various lenders, including XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX, and others. I did not apply for credit with any of these companies. \n\nI filed an identity theft report with the FTC and a police report with the XXXX XXXX Police Department ( XXXX # XXXX ). I submitted disputes to both XXXX  and TransUnion with all supporting documentation, but the fraudulent account and unauthorized inquiries remain. \n\nThis identity theft incident is damaging my credit standing and financial well-being. Under the Fair Credit Reporting Act ( FCRA ), including Sections 605B and 611, the credit bureaus are required to block and remove fraudulent and inaccurate information. I am requesting the CFPBs help to ensure full compliance with federal law and the immediate removal of these fraudulent items from my credit reports."
+  value: "I am seeking your assistance in investigating accounts from these companies that are inaccurately reporting late payments. After reviewing my credit report, I noticed certain accounts showing late payments, which is incorrect. These accounts should not have any late payment remarks."
+  value: "I am writing to address the ongoing inaccuracies on my credit report. Despite previous attempts to dispute the following items, they remain unresolved, significantly impacting my ability to obtain credit. I am entitled to monetary compensation under 15 U.S. Code 1681i ( 6 ), which requires consumer reporting agencies to notify consumers of the results of reinvestigations within five business days after completion. You failed to correct these errors indicates noncompliance with the Fair Credit Reporting Act ( FCRA ) and Fair Debt Collection Practices Act ( FDCPA ).\n\nUnder the FCRA, if disputed items can not be verified, they must be removed from my report. As per 15 U.S. Code 1681n ( Civil Liability for Willful Noncompliance ) and 15 U.S. Code 1681o ( Civil Liability for Negligent Noncompliance ), your agency may be held liable for failing to comply with federal law. Additionally, 15 U.S. Code 1692k holds entities accountable for violations related to debt collection. Any continued failure to address these inaccuracies in a timely manner will result in further legal action.\n\nCharge-Off Accounts listed below must be DELETED IMMEDIATELY! due to violations of FDCPA Section 807 ( False and Misleading Representations ) and These accounts are falsely reported as charge-offs.\n\nCollection Accounts Collection accounts listed below is in violation of 15 U.S. Code 1681b ( Permissible Purposes of Consumer Reports ). These must be DELETED in my report immediately.\n\nUnauthorized Inquiries listed below were made without my authorization, violating 15 U.S.C. 1681c ( 1 ) ( A ) ( B ) ( i ) ( 3 ). They must be deleted from my report."
+  value: "I am writing to express my concern regarding the disputed accounts on my credit report. Multiple times, I have raised the issue of inaccuracies in these accounts, and have consistently requested that they be thoroughly investigated. Despite my efforts, I have yet to receive any resolution or corrective action. These erroneous accounts are severely damaging my credit file and hindering my ability to live a normal life. The negative effects of these inaccuracies have caused immense hardships for me, and I am left with no choice but to plead for your assistance in rectifying this situation as soon as possible. I kindly request that you conduct a thorough investigation into the reporting of each of these disputed accounts. It is imperative that the necessary steps are taken to update and rectify my credit report without any further delay. With your help, I hope to restore the accuracy and integrity of my credit file so that I may regain control over my financial well-being. I sincerely urge you to give this matter your utmost attention and take swift action. Your cooperation and support in resolving this issue promptly would be greatly appreciated. Thank you in advance for your understanding and assistance."
+  value: "I am writing to formally appeal XXXX recent decision to permanently close my XXXX  account and potentially withhold my funds for 180 days. I have been a loyal XXXX  user since 2020, maintaining a positive transaction history until this unfortunate incident. \n\nRecently, my account was compromised by individuals posing as XXXX  support representatives. Upon discovering unauthorized transactions and missing funds, I immediately reported the incident to XXXX. Instead of receiving assistance as a victim of fraud, I find myself being penalized with account closure and an extended hold on my funds. \n\nI want to bring to your attention several critical points : The fraud occurred due to sophisticated impersonation of XXXX  support staff, highlighting a security vulnerability in the system rather than any violation on my part. \n\nThe funds currently held in my account ( {$470.00} ) were legitimately obtained through the sale of XXXX XXXX XXXXXXXX XXXX. \n\nMost crucially, these funds are urgently needed to purchase an XXXX XXXX XXXX XXXX ( XXXX  ) device for my XXXX XXXX  who has XXXX XXXX. She currently struggles with a XXXX XXXX XXXX that significantly impacts her ability to communicate with others, affecting both her education and mental well-being. This medical device is essential for her development and quality of life. \n\nI understand XXXX XXXX  commitment to maintaining platform security and preventing fraudulent activities. However, in this case, I am the victim of fraud, not the perpetrator. The extended hold on my funds creates an undue hardship, particularly given my daughter \'s pressing medical needs. \n\nI can provide the following documentation to support my appeal : Complete transaction history showing my legitimate use of XXXX XXXX documentation regarding my daughter \'s condition and the necessity of an XXXX device All correspondence with XXXX  support regarding the unauthorized access. \n\nI would like to add that my account is not yet closed but is still \" frozen \'\' according to the site as well as the app therefore can still be \" unfrozen \'\'."
+  value: "I am writing to formally dispute and demand the immediate removal of an account that Experian has reinserted into my credit report without providing prior written notice, as required by the Fair Credit Reporting Act ( FCRA ), XXXX XXXX. XXXX ( a ) ( XXXX ) ( B ) ( ii ). \nThe following account, which was previously deleted, has now been reinserted : XXXX XXXX XXXX Balance : {$850.00} Violation of FCRA XXXX ( a ) ( XXXX ) ( B ) Under FCRA XXXX ( a ) ( XXXX ) ( B ), if a credit reporting agency reinserts previously deleted information, it must : XXXX. Certify the accuracy of the information with the furnisher, and XXXX. Provide written notice to the consumer within XXXX business days of the reinsertion. \nI received no such notice, making this reinsertion a direct violation of federal law. \nMy Legal Rights and Demands Because Experian failed to follow the proper reinsertion procedures, I am demanding the following : Immediate and permanent deletion of this account from my credit report. \nA written explanation of why the account was reinserted without notice. \nA copy of the certification of accuracy that Experian claims to have received from the furnisher. \nIf Experian Fails to Comply If this issue is not resolved within XXXX days, I will take the following actions : Submit a complaint to my states XXXX XXXX \nPursue legal action under FCRA XXXX and XXXX, which provide for statutory damages, punitive damages, and attorneys fees for willful or negligent noncompliance. \nFinal Notice This is a final demand for Experian to immediately delete the reinserted account and provide written confirmation. Failure to comply will result in regulatory escalation and legal action. \nSincerely, XXXX XXXX XXXX XXXX"
+  value: "I am writing to formally dispute the inaccurate information reflected on my credit report. The information appears to violate my rights under the Fair Credit Reporting Act ( FCRA ) and should be removed or corrected promptly. The FCRA mandates that only accurate, complete, and verifiable information be included in credit reports ( 15 U.S.C. 1681e ( b ) ).\n\n1. Incorrect Accounts Several accounts listed on my credit report appear to be inaccurate, incomplete, or outdated. Under FCRA Section 1681i ( a ) ( 1 ), I am entitled to dispute information that I believe to be inaccurate, and the credit reporting agency is required to investigate the disputed information within 30 days. I have reason to believe that the following accounts do not belong to me, contain incorrect data, or should no longer be listed due to age or resolution : XXXXXXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXXXXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXXXXXX As required under the FCRA, I request that these accounts be thoroughly investigated and either updated or removed from my credit report if found to be inaccurate.\n\n2. Unwarranted Inquiries I also dispute the following credit inquiries listed on my report. Under FCRA Section 1681b ( c ), credit inquiries must be made with my permission or under circumstances where I have applied for credit. If these inquiries were not authorized by me or do not meet the requirements for a legitimate credit inquiry, they should be removed from my report : XXXX XXXX Please consider this my formal request for an investigation under the FCRA. If the items mentioned above are not removed or corrected, I will seek further action, including filing complaints with the CFPB and taking legal steps to enforce my rights under the law."
+  value: "I am writing to formally dispute the recent response provided in regard to my complaint filed with the Consumer Financial Protection Bureau ( CFPB ) concerning the inaccurate reporting of a bankruptcy on my credit file. I have serious concerns about the validity of credit bureaus verification process and the credibility of the information allegedly used to substantiate this reporting. The CFPB response states that the disputed public record, labeled as \" XXXX XXXXXXXX XXXX XXXX XXXXXXXX -VERIFIED AS REPORTED, \'\' has been reviewed and verified. However, I have obtained clear, written confirmation from the relevant court United States XXXX Court XXXX XXXX of Tennessee that they do not report or furnish bankruptcy proceedings information to credit reporting agencies. This official statement from the court raises serious questions about who, in fact, provided the information used in your \" verification \'\' process. Furthermore, I contacted XXXX, a known third-party data provider, and they confirmed that they have no record of the bankruptcy account in question. This evidence contradicts any claim that the information was verified as reported. Given that : XXXX. XXXX. The court itself has stated it does not report information to credit bureaus. XXXX, a potential data source, has confirmed no record of the account. It is clear that TransUnion lacks a reliable and valid source to justify the continued reporting of this bankruptcy on my credit file. This failure in the verification process constitutes a direct violation of the Fair Credit Reporting Act ( FCRA ) under Section 611, which requires that consumer reporting agencies conduct a reasonable investigation to ensure the accuracy of information included in consumer files."
+  value: "I am writing to inform you about a very alarming and important issue regarding the compromise of my social security number, which has resulted in me being a victim of a data breach and identity theft. To address this situation promptly, I have already contacted the Federal Trade Commission and filed an FTC Report which is enclosed with this correspondence. \n\nIn accordance with 15 USC 1681c-2 c ( a ), it is imperative that you, as a credit reporting agency, take immediate action to block and remove all information associated with this identity theft from my credit report. This statute mandates that credit reporting agencies must promptly address such requests within four business days of receiving a complaint that includes the following information :"
+  value: "I am writing to inform you that I am disputing the debt referenced above, which your company claims I owe. Under the Fair Debt Collection Practices Act, I am entitled to dispute the validity of this debt and request verification or validation.\n\nPlease be advised that : 1. I dispute the entire amount of the alleged debt.\n\n2. I request that you provide validation of the debt, such as documentation available to verify that I agreed to pay the creditor, the current balance, a breakdown of charges, and an accounting of how the debt was reached.\n\n3. You cease any debt collection efforts until this dispute is resolved and verified documents are provided to me.\n\n4. I request my debt account not be reported to any credit agencies until you provide evidence validating the debt. \n\nAs per my rights, I ask that you verify the debt and provide written proof that the debt belongs to me within 30 days. Also, please be aware that I request all future communications be in writing. \n\nIf you are unable to verify this debt, I respectfully request that you confirm in writing that you are terminating collection efforts and will update all negative credit information relating to the matter. \n\nThank you for your prompt attention to this matter. I look forward to your acknowledgment and kindly request a written response by [ specify a reasonable date, usually within 30-45 days ]. \n\nSincerely, XXXX XXXX"
+  value: "I carefully review my credit report to ensure the accuracy of my accounts, and I have never been late on a payment. Its possible that there is an error in the reporting."
+  value: "I declare under penalty of perjury that the following accounts were not opened or authorized by me. I did not sign any agreement, contract, or give permission for these accounts to be established. These items may be the result of identity theft. As a consumer, I have the legal right under the Fair Credit Reporting Act ( FCRA ), Fair Debt Collection Practices Act ( FDCPA ), and other federal protections to dispute and request the deletion of unverifiable or inaccurate accounts. \n\nAdditionally, under the doctrine of estoppel by silence ( Engelhardt v. Gravens, 281 SW 715 ), failure to provide proof of these debts constitutes grounds for removal. \n\nDisputed Accounts to Be Deleted Immediately : XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX  As a consumer protected by law, I respectfully demand the immediate deletion of these accounts"
+  value: "I discovered incorrect accounts on my credit report, and I have no idea how they got there. I regularly check my report, but this time, unexpected discrepancies appeared. I even tried refreshing my browser, thinking it might be a glitch, but the errors remained. Since this issue persists, I request a thorough review of the documents Ive submitted so that I wont have to worry about this problem again."
+  value: "I had my identity stolen in TX and made a number of complaints to get it resolved. It was though XXXX  I submitted a complaint about it last XXXX though XXXX and never received anything from the collection company and XXXX  would not provide the information because the SS # matched but the DOB they had on file did not. It was within the past week added to my credit report as a collection when I though it was resolved I informed both the company ( XXXX  ) and the collection agency it was fraud. I thought it was resolved until it showed up on my credit report as they refused to send me the information I requested and I informed them it was fraud."
+  value: "I have a goal of getting a house as soon as possible but the stuff on my credit report will really put me in trouble. Ive been trying to understand some instances why the credit bureaus may take some time to respond but this is so unprofessional. My name is XXXX XXXX and I am filing this complaint for falsely reporting misleading information. Please take note, it is me personally who is filling this. There is no third party involved. Please review the uploaded letters."
+  value: "I have been disputing and trying to erase fraudulent accounts from credit report. I am a victim of identity theft. I\'ve requested to have certain addresses and phone number removed. I have never lived on XXXX XXXX XXXX XXXX XXXX, never lived on XXXX XXXX XXXX XXXX Never had credit cards in my name. My identity has clearly been compromised."
+  value: "I have not supplied proof under the doctrine of estoppel by silence, Engelhardt V. Gravens ( MO ) 281 SW 715.719. I pressume that no proof of the alleged debt, nor therefore any such debt, in fact therefore exist."
+  value: "I paid a payment last XXXX XXXX and did not update the payment status and when i called them since last year after XXXX they want me to call them after three days and i did and nothing happened still."
+  value: "I purchased a home from Illinois to move to Louisiana via a realtor XXXX XXXX XXXX. I was set up with NewsRez Mortgage. I originally setup to send in my payment, but switched over to automatically for withdrawal in 2020. The first year after paying my mortgage NewRez faile to pay my property tax on time. This caused an emotional stress and embarrassment of having a Sheriff to place a notice on my front door of being in default of paying my property tax. Then in XXXX NewRez failed to pay my homeowners insurance on time which had XXXX insurance to close my account. I attempt plead with them that it wasnt my fault. NewRez failed to withdraw the money from my escrow account which was on file. NewsRez forced me into some ridiculous insure they were applying on my automatic withdrawal. My mortgage went from under & XXXX {$1900.00} a month to {$3300.00} a month. They havent operated in good faith. It seems they were in cahoots with Louisiana insurance to charge consumers more. I was always in good standing! Im writing now not realizing your agency handles such matters. Im a paying consumer with every intentions of paying for what I expect and not to be railroaded by NewsRez. If the market hadnt changed in rates of wouldve went with another company.\n\nAlso, I sent them my tax exemption status in which they failed to apply towards my mortgage for the last few years .. Ive had enough and I need to know what recourse do I have. Thank you as I look forward to hearing from you! \n\nThank you, XXXX XXXX XXXX XXXX"
+  value: "I recently reviewed my consumer report and identified several inaccuracies that must be corrected immediately. These errors have caused me significant distress, and I demand swift resolution to ensure my consumer rights under the Fair Credit Reporting Act ( FCRA ) are upheld. Please see the attached file for this concern. Please see the attached file."
+  value: "I submitted lawful affidavits to this company demanding the removal of all unauthorized information, a permanent freeze on my account and data, and a full revocation of any presumed consent to collect, store, or report my personal information. \n\nI am the Secured Party Creditor over the private estate associated with this account. This company has no verified contract, no valid consent, and no lawful authority to access or use my data under 15 U.S.C. 1681b, the Gramm-Leach-Bliley Act ( 15 U.S.C. 6801 ), and applicable trust law. \n\nI have demanded proof of authority or contract, which has not been provided. I am now escalating to the CFPB for enforcement and resolution. Affidavits documenting my demands are attached."
+  value: "I was utterly shocked and devastated upon discovering unauthorized accounts, credit inquiries and inaccurate personal information made or reported without my knowledge or consent. Despite my efforts to seek clarification from the creditors, they have shamefully failed to provide the necessary information. I demand immediate action and transparency from the creditors. The creditors must provide detailed information on each account and inquiry, including dates, purposes, and types of credit products involved, furnish relevant application documents, and present evidence of explicit authorization for each inquiry. Please see the attached file for what I am complaining about!"
+  value: "I\'ve complained about procollect and this false debt. They are continuing to harras me and call me well before XXXX. Today it started before XXXX."
+  value: "In XXXX, XXXX, I financed the purchase of a treadmill through XXXX for approximately XXXX. The treadmill was delivered on XX/XX/XXXX. Upon delivery, I immediately noticed that the treadmill was defective and/or not functioning properly. I contacted the merchant on XXXX to report the issue and requested either a refund or a cancellation of the purchase. \n\nDespite my efforts, the merchant did not resolve the issue. I then contacted XXXX on many times email, disputed the product and to dispute the charge and explain the situation. XXXX did not properly address the dispute, and instead, the account was later transferred to a collection agency, TrueAccord ( also listed as TrueCPB ), around XX/XX/XXXX. \n\nI have attempted to explain the situation to the collection agency, but collection activity has continued. I believe I should not be held responsible for this debt because the product was defective and my dispute was raised promptly after delivery. \n\nI am requesting that the debt be canceled and that all collection activity related to this account cease immediately."
+  value: "In accordance with the Fair Credit Reporting act. The List of accounts below has violated my federally protected consumer rights to privacy and confidentiality under 15 USC 1681.\n\nXXXX XXXX XXXX  - XXXX XXXX - XXXX XXXX XXXX  - XXXX XXXX XXXX XXXX - XXXX XXXX XXXX  - XXXX List of Unauthorized Inquiries : XXXX  XXXX XXXX  - XXXX 15 U.S.C 1681 section 602 A. States I have the right to privacy. \n\n15 U.S.C 1681 Section 604 A Section 2 : It also states a consumer reporting agency can not furnish a account without my written instructions 15 U.S.C 1681c. ( a ) ( 5 ) Section States : no consumer reporting agency may make any consumer report containing any of the following items of information Any other adverse item of information, other than records of convictions of crimes which antedates the report by more than XXXX  years.\n\n15 U.S.C. 1681s-2 ( A ) ( 1 ) A person shall not furnish any information relating to a consumer to any consumer reporting agency if the person knows or has reasonable cause to believe that the information is inaccurate."
+  value: "List of accounts below has violated my federally protected consumer rights to privacy and confidentiality under 15 USC 1681.\n\nI looked at my XXXX XXXX XXXX TransUnion credit report on XX/XX/year> and noticed some things are incomplete and not accurate. And according to the fair credit reporting act Whenever a consumer reporting agency prepares a consumer report it shall follow reasonable procedures to assure maximum possible accuracy of the information concerning the individual about whom the report relates according to 15 USC 1681 ( e ) ( b ).\n\nAnd according to 15 USC 1681 5 they are suppose to do this ( 5 ) Treatment of inaccurate or unverifiable information ( A ) In generallf, after any reinvestigation under paragraph ( 1 ) of any information disputed by a consumer, an item of the information is found to be inaccurate or incomplete or can not be verified, the consumer reporting agency shall ( i ) promptly delete that item of information from the file of the consumer, or modify that item of information, as appropriate, based on the results of the reinvestigation; and ( ii ) promptly notify the furnisher of that information that the information has been modified or deleted from the file of the consumer.\n\nAnd according to 15 USC 1681s-2 they are suppose to not furnish any information relating to a consumer to any consumer reporting agency if the person knows or has reasonable cause to believe that the information is inaccurate."
+  value: "MY CARD WAS CANCELLED XX/XX/XXXX NO REASON. \nI WAS PAID IN FULL I DO NOT MAKE PAYMENTS EVER. \nI PAID IN FULL. \nI RECEIVED A STATEMENT THAT I WAS LATE ON TWO PAYMENTS AND THAT THE LATE FEE WAS {$41.00} x 2 MONTHS. I CONTACTED VISA BILLING AND THEY AGREED I WAS NOT LATE AND CREDITED BACK THE {$4100.00} X 2 TO MY BILL. \nMY ACCOUNT WAS CLOSED AND I HAD EARNED CITI BANK REWARDS {$980.00} IN XXXX, BEFORE THEY CANCELLED MY CARD. \nI WAS TOLD I FORFEITED THE REWARDS OF {$980.00} BECAUSE I FILED A XXXX  XXXX BANKRUPTCY. \nI DID FILE AND I HAD IT DISMISSED IN 5 DAYS. \nIT WAS MY LAWYERS IDEA IN A CONSTRUCTION DEFECT TRIAL I WAS IN THAT I LOST.T HE LAWYERS SAW THE XXXX  XXXX AND MY LAWYER NEGOTIATED THEM DOWN TO XXXX XXXX ON THE DOLLAR IF I PAID THEM ON XX/XX/XXXX. \nI PAID THE DISCOUNTED FEES THAT SAVED ME {$250000.00} AND IMMEDIATELY MY LAWYER DISMISSED THE XXXX XXXXXXXX BANKRUPTCY. \nCITI BANK TOLD ME I WAS CANCELLED DUE TO THE BANKRUPTCY WHICH WAS DISMISSED IT NEVER WENT TO COURT. I TOLD BILLING SAID XXXX XXXX SINCE XXXX {$50000.00} LIMIT DID NOT CANCEL OR MY OTHER VISA. \nI WENT UP TO EXC OFFICES WHO TOOK MY COMPLAINT TO REINSTATE MY CARD. THEN ON MY BILL WAS A INTEREST CHARGE ON THE LATE FEE THAT WAS WAIVED AND CREDITED, THAT WAS FOR {$16.00} ON A PURCHASE. \nI MADE NO PURCHASES AND CITI BANK TOLD THE INTEREST WAS CHARGED ON THE PAYMENT I MADE IN XXXX. \nI MADE IT CLEAR THAT A PAYMENT IS NOT A PURCHASE AND THEY STOLE {$980.00} REWARDS I EARNED AND I RECORDED THE EXC OFFICE VP TELLING ME I WAS CORRECT THAT THEY CAN NOT CHARGE INTEREST ON INTEREST CHARGED ON A PAYMENT IN FULL THAT WAS NOT A PURCHASE> I WAS TOLD I WOULD GET A DECISION IN THE MAIL.THE DECISION I GOT IN THE MAIL POSTAL IS THAT I WAS LATE TWO TIMES IN ONE YEAR SO THEY CANCELLED MY CARD<IOH IT WAS NOT RELATED TO A BANKRUPTCY. CALL RECORDED I THEN SENT IN ONLINE I CAN\'T BE LATE IF THE LATE FEE WAS WAIVED TWO TIMES CITI BANK AGREED I WAS NOT LATE THAT MY BILL CYCLE SHORTENED WHEN THEY CANCELLED MY CARD> I WAS SHOCKED BECAUSE MY REMINDER IN MY BILL PAY ALWAYS HAD ME PAY MY CITI CARD VISA BY ETF ONE DAY BEFORE IT IS DUE EVERY MONTH< THE EXC OFFICE PHONED ME AGAIN AND TOLD ME THAT MY CITI VISA EMAIL NOTIFICATION YOUR BILL IS DUE WAS INCORRECT THAT THEIR IT GUYS HAVE NO WAY TO CHANGE THE BILL IS DUE TO WHEN A CARD IS CANCELLED SO THEY KNOW THEY HAVE A PROBLEM AND THAT IS WHY THEY WAIVED THE TWO LATE FEES \'\'. THIS IS INTENTIONAL FRAUD< HOW MANY PEOPLE LIKE ME JUST PAY THE BLACKMAIL INTEREST CHARGED ON INTEREST THEY KNOW AND FEAR KNOW THE BILL IS ALMOST DOUBLE EVERY MONTH. MY BILL IS DOUBLING MONTHLY ON MY BILL CUT DATE THE CITI EMAILS ME< THE CUT DATE IS INCORRECT WITH TIME TO PAY YOYR BILL> TO RECAP ; I DID NOT KNOW MY CARD WAS CANCELLED AND THE CUT DATE WAS SHORTENED MAKING MY PAYMENT LATE. THEY TOLD ME REINSTATE YOUR CARD AND WE WILL REMOVE THE INTEREST THAT IS BEING CHARGED ON INTEREST> I WENT IN TO REINSTATE MY CARD BECAUSE IT HAS MY PICTURE ON IT WITH MY XXXX MEMBERSHIP NUMBER MAKING IT EASY TO USE ONE CARD> I HAVE BEEN USING MY OTHER VISA AT XXXX WHICH DID NOT CANCEL ME SAME AS XXXX, AND I NOW HAVE TO SWIPE MY DEAD CITI VISA TO SHOW I AM A PAID MEMBER AT PHARMACY AND CHECK OUT AND PAY WITH MY OTHER VISA< VERY INCONVIENTANT I WAS TOLD I WOULD HEAR BY LETTER IT LOOKED GOOD > I RECEIVED THE LETTER TELLING ME YOUR REINSTATING YOU CARD IS REJECTED> THEN I GOT ANOTHER LETTER TELLING MY THEY COULD NOT REINSTATE MY CARD BECAUSE I HAD BEEN LATE 2 TIMES IN ONE YEAR. THEN ANOTHER CALL IF I DID NOT PAY THE PAST DUE OWED IT WAS BEING REPORTED TO THE CREDIT BUREAU> CITI BASK REPORTED ME TO THE CREDIT BUREAU. \n\nI CONTACTED A CLASS ACTION LAW FIRM THAT SUES FINANCIAL INSTITUTIONS. THEY TOLD ME THAT THEY ALREADY HAVE HEARD FROM OTHER CARD HOLDERS THE SAME COMPLAINT OF INTEREST BILLED ON INTEREST ON A CLOSED CARD I ASKED THE LAST CALLER FROM EXC CORP OFFICE TO REMOVE THE BAD REPORT ON EQUIFAX AND SHE TOLD ME NO< YOU CAN CONTACT THEM WE STICK BY YOU OWE US MONEY AND THAT MONEY WILL GROW AND GROW AND GROW. \nSHE WAS RECORDED AND SHE WAS MEAN AND HAPPY TO THREATEN ME< I AM A SENIOR I DON\'T NEED TWO VISAS & ONE XXXX & ONE VISA DEBIT CARD I NEED MY GOOD CREDIT RESTORED IT HAS ALWAYS BEEN IN THE HIGH XXXX \'S AND THE LAW FIRM TOLD ME THIS IS ALSO FINANCIAL ELDER ABUSE"
+  value: "My account was never late! I have had exceptional payment history all payments were placed on XXXX. This late payment that is reporting is a result on a systematic error on their end processing my payment. \n\n\nThis was clearly a billing error made my the company and is not a reflection of my payment experience which violates USC Code 1681eb. This error has caused severe hard to my reputation, my character, my mode of living and to my family!\n\nI demand the late payment to be updated.\n\nThey are not in compliance with the following law. 15 USC 1666b and its requirements set the standards and the guidance for a creditor to treat a payment as late, yet they are reporting a payment as late and they did not comply with the law!\n\n15 USC 1666b ( a ) Time to make payments A creditor may not treat a payment on a credit card account under an open end consumer credit plan as late for any purpose, unless the creditor has adopted reasonable procedures designed to ensure that each periodic statement including the information required by section 1637 ( b ) of this title is mailed or delivered to the consumer not later than 21 days before the payment due date.\n\nNever Sent the periodic statement along with the disclosures from section 1637 ( b ).\n\nI have requested proof that this information was mailed or delivered 21 days before the payment due date and this information was requested in good faith pursuant rule 1002 and It was never provided. \n\n\nThis is unfair, illegal, fraudulent, and not equitable to me as a consumer! \n\n\nUpdate the late payments from my consumer reports"
+  value: "My account with EQUIFAX EXPERIAN TRANSUNION was never late! I have had exceptional payment history all payments were placed on Autopay. This late payment that is reporting is a result on a systematic error on their end processing my payment.\n\nThis was clearly a billing error made my the company and is not a reflection of my payment experience which violates USC Code 1681eb. This error has caused severe hard to my reputation, my character, my mode of living and to my family!\n\nI demand the late payment to be updated.\n\nThey are not in compliance with the following law. 15 USC 1666b and its requirements set the standards and the guidance for a creditor to treat a payment as late, yet they are reporting a payment as late and they did not comply with the law!\n\n15 USC 1666b ( a ) Time to make payments A creditor may not treat a payment on a credit card account under an open end consumer credit plan as late for any purpose, unless the creditor has adopted reasonable procedures designed to ensure that each periodic statement including the information required by section 1637 ( b ) of this title is mailed or delivered to the consumer not later than 21 days before the payment due date.\n\nEQUIFAX EXPERIAN TRANSUNION Never Sent the periodic statement along with the disclosures from section 1637 ( b ).\n\nI have requested proof that this information was mailed or delivered 21 days before the payment due date and this information was requested in good faith pursuant rule 1002 and It was never provided.\n\nThis is unfair, illegal, fraudulent, and not equitable to me as a consumer!\n\nUpdate the late payments from my consumer reports"
+  value: "My account with XXXX XXXX XXXX XXXX XXXX  XXXX was never late! I have had exceptional payment history witH XXXX XXXXXXXX and all payments were placed on Autopay. This late payment that is reporting is a result on a systematic error on their end processing my payment. This was clearly a billing error made my the company and is not a reflection of my payment experience which violates USC Code 1681eb. This error has caused severe hard to my reputation, my character, my mode of living and to my family! I demand the late payment reported in to be removed. b They are not in compliance with the following law. 15 USC 1666b and its requirements set the standards and the guidance for a creditor to treat a payment as late, yet they are reporting a payment as late and they did not comply with the law! 15 USC 1666b ( a ) Time to make payments A creditor may not treat a payment on a credit card account under an open end consumer credit plan as late for any purpose, unless the creditor has adopted reasonable procedures designed to ensure that each periodic statement including the information required by section 1637 ( b ) of this title is mailed or delivered to the consumer not later than 21 days before the payment due date. XXXX, XXXX, XXXX XXXX XXXX XXXXXXXX never sent the periodic statement along with the disclosures from section 1637 ( b ). I have requested proof that this information was mailed or delivered 21 days before the payment due date and this information was requested in good faith pursuant rule 1002 and It was never provided. This is unfair, illegal, fraudulent, and not equitable to me as a consumer! Delete the late payments from my consumer reports"
+  value: "On XX/XX/year> I called to request that my debt be returned to American Express. I wanted to know if that\'d be possible. The line was directed to a XXXX XXXX I verified the XXXX account number and proceeded to ask my question. I was then stopped by XXXX XXXX and was told that I needed to give him my full social security number to verify my identity. When I expressed that I was uncomfortable with giving my complete social security number ( When I personally have not entered into an agree with them and am uncomfortable with them have my personal information ), XXXX XXXX began yelling at me and using predator tactics such as elevating his voice, misleading the conversation and talking over me, in order to intimidate me. I know by law that I not required to verify my identity by giving my full social. I wish to not deal with a shady business, with predatory agents"
+  value: "On XX/XX/year> my phone blew up from my credit card companies and from XXXX  saying that I have a collection against me and my XXXX XXXX dropped XXXX points. I never owed anyone anything as my credit scores have always been in the low to mid XXXX \'s. I contacted XXXX  about this situation and put in a complaint which they resolved rather quickly and put back the XXXX points. Then I called Radius Global Solution to find out why they put ANYTHING in collections WITHOUT EVEN GIVING ME ANYTHING IN WRITING. There is no way shape or form to send anything to collections without at least giving me the opportunity to rectify this problem."
+  value: "On XXXX separate occasions between XX/XX/XXXX and XX/XX/scrub> 2025, I called CoreLogic ( also operating asXX/XX/XXXX to request a Security Freeze on my consumer file. Each time, I was told that CoreLogic does not allow consumer freezes and that they do not have any process to block or restrict access to my information. \n\nI explained that I was requesting this freeze under my rights granted by the Fair Credit Reporting Act ( FCRA ), which applies to consumer reporting agencies. Despite this, the company continued to deny my request. \n\nI also attempted to find an official form on their website but was directed only to employee and applicant forms, not consumer options. This refusal prevents me from protecting my personal information and is a violation of the FCRA. I am seeking CFPB assistance to ensure CoreLogic complies with freeze requests from consumers."
+  value: "Recently, I did an investigation on my credit report which caused severe XXXX upon me and found unverifiable, invalidated, inaccurate, and questionable items that your agency didn\'t make sure it was reporting 100 % correct.\n\nIn accordance with the Fair Credit Reporting Act, everything has to be 100 % accurate on my credit report and Under 15 U.S. Code 1681e ( b ) and 15 U.S. Code 1681i ( 5 ) these accounts are in violation of not reporting 100 % accurate."
+  value: "Scammers was taking my money. Addin my bank account i never got my money back"
+  value: "The Fair Credit Reporting Act ( 15 U.S. Code 1681 ) says ( 1 ) The banking system is dependent upon fair and accurate credit reporting. Inaccurate credit reports directly impair the efficiency of the banking system, and unfair credit reporting methods undermine the public confidence which is essential to the continued functioning of the banking system.\n\nSo whenever there is a violation under the FCRA, it impairs the efficiency of the banking system. This is a violation of my privacy with my consumer report, since I control what is listed and what is not. In the event that any accounts are reported without my written consent, that is considered identity theft.\n\nThis is a violation of both 15 U.S. Code 1681b ( 2 ) and 15 U.S. Code 1681c-2. This leads way to civil liability against the credit reporting agency for negligent and willful noncompliance under 15 U.S. Code 1681n, which allows for {$1000.00} per violation, for account listed without my expressed written consent."
+  value: "The banker told me I failed to qualify because the bank \'s web page did not apply the correct code when my account was created ( I clicked \" Enroll today \'\' on the web page saved to a pdf ). I kept a copy of the web page and the link I used to create the bank account. It has been uploaded below. The banker, XXXX, still told me I am wrong and refuses to credit my account the {$450.00} I earned by meeting all of the bank \'s requirements. I asked if there were any alternatives for me other than to file a complaint with the CPFB ; XXXX said no, there were no other alternatives available at this point."
+  value: "The loan rate wasnt 11.99 % this information is inaccurate. By 12CFR 1006.34C,12CFR1006.6C,15 USC1681e ( b ) and 15USC 1681S-2 ( A ) Should be removed from my credit report and discharge. The Bank was paid for the debt."
+  value: "These can be combined on my credit report, you have shown incorrect accounts that should not be there at all. This is not only unjust to me, but it\'s also concerning, because I\'ve never done or made any of the things you accuse me of. If you don\'t look into these accounts, I\'ll take legal action against you."
+  value: "This complaint involves Citibank regarding the misapplication of payments and incorrect late reporting on my account. This is a recurring issue, as I previously submitted complaint # XXXX regarding similar concerns. \n\nOn XX/XX/XXXX, I agreed to a repayment plan with Citibank. \nOn XX/XX/XXXX, I made two payments ( {$180.00} and {$92.00} ), which I understood would bring my account current for XXXX and XX/XX/XXXX based on information provided by a Citibank representative. Despite this, Citibank continues to report my account as late. On XX/XX/XXXX, I spoke with a representative ( ID : XXXX ) who stated that because I did not make an additional payment in XXXX, my account is considered past due. \n\nOn XX/XX/XXXX I spoke with XXXX XXXX who indicated the account is not past due but the XXXX payment was not received. Even thought a payment was made on XX/XX/XXXX I would still need to make the payment that is due XX/XX/XXXX in spite the fact of XXXX confirming the account is current based on the repayment program. \n\nThis contradicts the {$0.00} past due balance shown in my online Citibank account. Of which I have attached supporting evidence. Citibanks own correspondence states that payments can be made on or before the XXXX of the month. My XX/XX/XXXX, payment should have covered XX/XX/XXXX, as it was made within the allowable timeframe. Citibank appears to be applying payments strictly by chronological month rather than honoring their stated policy of allowing early payments. \n\nThis situation has caused unnecessary damage to my credit report and financial standing, despite my adherence to the agreed-upon repayment plan. I request an immediate review of this issue and a formal response from Citibank through the CFPBs complaint resolution process."
+  value: "This is for a card with Sheels/FNBO XXXX XXXXXX/XX/XXXX I received an email telling me my credit card application was approved On XX/XX/XXXX I received an email asking me to take a survey based on my application process. \n\nI never filled out an application with Sheels. \n\nXX/XX/XXXX, I called Sheels/FNBO at the number provided at the bottom of the email, \" If you feel you received this in error or if you did not consent to an application for a line of credit, please call us immediately at XXXX. \n\nI was bounced around to three separate people on the phone. All asked my for my social security number and other private information. I told them I would not provide that as I did not fill out an application and I never wanted their card. I informed them I had received an approval email, but they refused to look up any account associated with an email address.\n\nKept pestering me for private information and refusing to verify if there was an account in my name associated with my email address, which clearly there is because I am getting an approval email to my email address. \n\nFlat out telling me that they can not associate an account with an email address and refusing to do anything without trying to get all my personal information screams of a scam. \n\nAny account with my email address, which I did not open should be terminated."
+  value: "This loan company has not had a manager for over a year and has been having standard employees with no upper management or escalation department to go to regarding arising issues. Ive tried more than several times to get the name of the general manager of XXXX XXXX XXXX located on XXXX XXXX XXXX  XXXX NV & have spoken with a woman named XXXX. She has never been the type to resolve any issues and always responded with theres nothing I can do with no empathy, almost as if a robotic answering service is handled by that company. There is no other minute loan center location in XXXX XXXX expect for this one and this place needs to be shut down. They give people loans but have no staff and empathic leadership to help run the place. It really is as horrible as the reviews go on google & yelp. Hopefully the CEO of XXXX XXXX XXXX sees this and acts accordingly."
+  value: "This request is to follow up the correction of the erroneous status of my account has been diligently neglected by your agency. I have not received any response as of today. Furthermore, the inaccurate information regarding my accounts still persists on my reports. Consequently, you have failed to adhere to the Fair Credit Reporting Act, 15 USC Sections 1681, within the legally mandated timeframe. The continued reporting of unverified information, despite my numerous attempts to address the issue directly with the creditor, now appears as willful negligence and non-compliance with federal statutes. \nXXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX  Balance Owed : {$0.00} XXXX  XXXX XXXX * * * * * * Balance Owed : {$0.00} XXXX  XXXX XXXXXXXX XXXX XXXX XXXX XXXX XXXX XXXX Balance Owed : {$0.00} CREDIT XXXX BANK NA XX/XX/year> XXXX XXXX XXXX XXXX, NJ XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX, KS XXXX XXXX XXXX XXXX XXXX XXXX, KS XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX, KS XXXX XXXX  XXXX XXXXXXXX XXXX XXXX XXXX XXXX XXXX XXXX Balance Owed : {$0.00} XXXX ROCK XXXX, KS XXXX XXXX XXXX XXXX * * * * * * Balance Owed : {$0.00} XXXX  XXXX XXXX * * * * * * Balance Owed : {$0.00} XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX Balance Owed : {$0.00}"
+  value: "Two unauthorized addresses have been added to my credit file without my knowledge or consent. These addresses are not associated with me, my residence, or any legitimate financial activity on my part. ( XXXX XXXX XXXX XXXX XXXXXXXX XXXX XXXXXXXX ( XXXX Address ID-Equifax ) and ( XXXX XXXX XXXX XXXXXXXX XXXX XXXX XXXX XXXX Address ID - Equifax ) When I told them this they did not remove it even after I provided a report. \n\nTwo hard inquiries from this year appear on my report which I did not authorize. I have not applied for credit or services with the institutions responsible for these inquiries. ( XXXX XXXX XXXX, ( XX/XX/year> XXXX XXXX XXXX ) and ( XXXX XXXX XXXX XXXX, ( XX/XX/year> ) XXXX XXXX  ) Even After the items were disputed with Equifax and reports were given the items were never removed. \n\nI am writing to formally dispute inaccuracies that have appeared on my credit report with your agency. Under the Fair Credit Reporting Act ( FCRA ), the Consumer Financial Protection Bureau \'s updated dispute procedures, and in light of the Equifax and Experian data breaches which have compromised consumer information, I am requesting immediate investigation and correction of the following fraudulent entries : Two unauthorized addresses have been added to my credit file without my knowledge or consent. These addresses are not associated with me, my residence, or any legitimate financial activity on my part.\n\nTwo hard inquiries from this year appear on my report which I did not authorize. I have not applied for credit or services with the institutions responsible for these inquiries."
+  value: "XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXXIL XXXXnDOB: XXXXTransunion\\nRE: Requesting you Block and Remove Fraud from My Consumer Report\\n>I am writing to inform you about a very alarming and important issue regarding the compromise of my social security number, which has resulted in me being a victim of a data breach and identity theft. To address this situation promptly, I have already contacted the Federal Trade Commission and filed an FTC Report  which is enclosed with this correspondence. In accordance with 15 USC 1681c-2 c (a), it is imperative that you, as a credit reporting agency, take immediate action to block and remove all information associated with this identity theft from my credit report. This statute mandates that credit reporting agencies must\\npromptly address such requests within four business days of receiving a complaint that includes the following information:  XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX  .I want to emphasize the gravity of this matter and my expectation for a prompt and effective response. Failure to respond satisfactorily will compel me to pursue legal action against your agency, as allowed under the law. Please be advised that I will seek damages, including but not limited to, statutory costs, with each violation incurring a statutory cost of $XXXX  as specified in\\n>15 U.S.C 1692k.\\n> Defamation of Character\\n>Negligent Enhancement of Identity Fraud\\n>Violation of the Fair Credit Reporting Act\\n>Violation under 15 U.S. Code \302\247 1681o - Civil liability for negligent non compliance\\n>Violation under 15 US Code 1681n (b) - Civil liability for willful non-compliance\\n>Failing to comply with 15 USC 1692(g)\\n>Violation under 15 U.S. Code 1681b Permissible purposes of consumer reports\\n>Under 15 U.S.C. 1681i (7) Method of verification\\n>Violations under 15 USC 1681 a (4) right to privacy\\n>Violations under 15 U.S. Code \302\247 1681c - Requirements relating to information contained in consumer reports I am taking this matter very seriously, and I demand that you take immediate action to block and remove the fraudulent account from my credit report. I have provided all the necessary information to facilitate this process. I kindly request that you acknowledge this letter and provide a timeline for the resolution of this issue .Your prompt attention to this matter is greatly appreciated . XXXX XXXX"
+  value: "XXXX XXXX XXXX XXXX XXXX XXXX XXXX, Tx XXXX XX/XX/XXXX Consumer Financial Protection Bureau ( CFPB ) XXXX XXXX XXXX XXXX  XXXX, IA XXXX Subject : Formal Complaint Regarding Inaccurate Late Payment Reporting Dear CFPB Representative, I am writing to formally dispute an inaccurate late payment entry on my credit report, as allowed under the Fair Credit Reporting Act ( 15 U.S. Code 1681i ). This inaccurate reporting has negatively affected my credit profile, and I am requesting an immediate investigation into this matter. \nDetails of the Disputed Late Payment : Creditor Name : XXXX / XXXX Account Number : # XXXX Date of Alleged Late Payment : XX/XX/XXXX and XX/XX/XXXX ( XXXX ) and XX/XX/XXXX and XX/XX/XXXX ( experian and XXXX XXXX I firmly believe this late payment is incorrect. Additionally, I am providing the following supporting evidence : Legal Basis for Dispute : Fair Credit Reporting Act ( FCRA ) - 15 U.S. Code 1681i I am exercising my right under this section to dispute inaccurate information reported on my credit file. The reported late payment does not accurately reflect my payment history, and I am requesting a formal investigation and correction.\n\nTruth in Lending Act ( TILA ) - 15 U.S. Code 1637 ( b ) Creditors must provide clear and accurate billing statements to consumers. If this late payment reporting does not align with the terms of my agreement, it constitutes an error that should be rectified immediately. \nObligations of Information Furnishers - 15 U.S. Code 1681s-2 Creditors and furnishers must ensure that the information reported to credit bureaus is accurate. If the creditor can not substantiate the late payment with verifiable documentation, they must remove it from my credit file.\n\nRequested Action : Conduct a thorough investigation into this dispute and provide a written response within 30 days as required by law.\n\nIf the late payment can not be verified, instruct the creditor to update my account status to \" Paid As Agreed, Never Late. \'\' Notify the credit reporting agencies ( Experian, XXXX, and XXXX ) to reflect the corrected information on my credit report. \nReference to PAANL ( Paid As Agreed Never Late ) : The terms of our agreement have always been adhered to, and the account in question should reflect a status of \" Paid As Agreed Never Late \'\' based on the timely payments made. It is imperative that my credit report accurately represents my financial responsibility and commitment to meeting payment obligations. \n\nI hereby request that you provide documented proof supporting the claim of late payments on this account. This proof should include specific details such as dates, amounts, and any relevant communication indicating that the payments were indeed late. In the absence of valid proof, I expect the credit reporting to be rectified promptly. \n\nIf, after a thorough investigation, you are unable to provide verifiable proof of late payments, I demand that the account be promptly updated to reflect its accurate status as \" Paid As Agreed Never Late. \'\' Per the FCRA, I request that you conduct a timely investigation and provide a written response within 30 days from the receipt of this dispute letter. \n\nFailure to adhere to this timeline will be considered a violation of the FCRA. Appreciate your prompt attention to this matter and expect a resolution that aligns with the legal obligations outlined by the FCRA. Your cooperation is crucial in maintaining the accuracy and fairness of my credit report. \nFailure to properly investigate and correct this inaccurate information will result in further actions, including a potential escalation to legal authorities for non-compliance with federal consumer protection laws. \nI have enclosed copies of all supporting documents related to this dispute. Please acknowledge receipt of this complaint and provide a written update on the investigation \'s progress within the legally mandated timeframe. \nThank you for your time and immediate attention to this matter. I look forward to your prompt response. \nSincerely, XXXX XXXX XXXX"
+  value: "XXXX XXXX XXXX XXXX XXXX XXXX, FL XXXX SSN : XXXX XXXX : XX/XX/XXXX To : XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX PA XXXX Subject : Formal Request for Deletion of Unauthorized Hard Inquiries Under the FCRA Dear XXXX Dispute Department , I am writing to formally dispute and demand the removal of several unauthorized hard inquiries that appear on my credit file with XXXX. These inquiries were not authorized by me, nor did I apply for credit or services with these institutions at the times indicated.\n\nUnder the Fair Credit Reporting Act ( FCRA ), 15 U.S. Code 1681b ( c ), credit inquiries must be backed by express written authorization or initiated directly by the consumer. The following inquiries violate that standard : XXXX XXXX XX/XX/XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXXXX/XX/XXXX Pursuant to FCRA 604 ( a ) ( 3 ), consumer credit reports must only be accessed for permissible purposes. These inquiries lack my consent and as such, must be considered unlawful access. Furthermore, under FCRA 611 ( a ), I have the right to dispute inaccurate or unverifiable information and demand its removal. \n\nPlease consider this a formal dispute and request for deletion of the above inquiries from my file. As mandated by the FCRA, you are required to investigate and respond within 30 days. Should these items remain without proper verification, they must be removed immediately.\n\nFailure to comply may result in formal complaints with the Consumer Financial Protection Bureau ( CFPB ) and the Federal Trade Commission ( FTC ), along with pursuit of any legal remedies allowed under FCRA 616 and 617, which provide for damages in cases of willful or negligent noncompliance. \n\nI respectfully request written confirmation of the outcome of your investigation. \n\nSincerely, XXXX XXXX"
+  value: "XXXX XXXX XXXX was my behavioral care provider for over a year. On XX/XX/XXXX they claimed that I cancelled my appointment with my therapist on XX/XX/XXXX and charged me a {$100.00} fee. In addition, they sent me multiple out-of-network bills months later. After I conducted further investigation with my insurance ( XXXX ) I found out my therapist was billing incorrectly using the wrong code, including this cancellation fee. I was in conversation with XXXX  trying to sort this out and on XX/XX/XXXX I received written email communication from them apologizing for their errors stating that it had been resolved. Later on XX/XX/XXXX I received a call from XXXX XXXX at Collection Solutions Inc stating that this fee had been sent to a debt collector without my knowledge and after I had received written communication from XXXX  that it had been resolved. I reached out to XXXX  multiple times to get this fixed and work it out and they were dismissive. I provided them with evidence, including screenshots of text conversations proving that I did not cancel my appointment and was simply running late. When I notified my therapist she said it was fine and was willing to accommodate me, we were even making plans to meet later in the day as that is what she preferred. Moreover, I sent them several screenshots of her cancelling our appointments on me day of because of her own personal matters. Every time I was understanding and willing to reschedule. In spite of all this evidence, they refused to do the right thing and listen to me. On XX/XX/XXXX XXXX at XXXXXXXX XXXX billing called me to yell at me and tell me she was not going to do anything about it. On XX/XX/XXXX I sent XXXX XXXX XXXX a Cease and Desist notice as they have been harassing me about this without providing any proof of why I\'m responsible for this. This issue has caused me great stress and agony, as well as so much time out of my daily life to address it. The most disappointing aspect of this is that this is coming from a mental health service provider. How they\'ve treated me greatly concerns me for the wellbeing of anyone under their care. And from seeing reviews about their company online, it seems like I am not the only XXXX. Please let me know if you have any questions for me. Thank you for your attention with this matter."
+  value: "XXXX XXXX, XXXX, XX/XX/XXXX This CFPB complaint has been filed to request pursuant to FCRA 605B ( 15 U.S.C. 1681c-2 ) that you, the XXXX credit reporting agency XXXX block information appearing on my consumer credit report that is the result of identity theft and fraud within XXXX business days of you receiving this complaint. This fraudulent, inaccurate, and false information consists of XXXX XXXX, XXXX XXXX, XXXX  XXXX XXXX XXXX, XXXX  XXXX, XXXX XXXX XXXX INQUIRIES XXXX  XXXX  XXXX  - XX/XX/XXXX, XXXX  XXXX  - XX/XX/XXXX, XXXX XXXX XXXX  XXXX  - XX/XX/XXXX, XXXX XXXX XXXX - XX/XX/XXXX, XXXX  XXXX  XXXX  - XX/XX/XXXX, XXXX  XXXX XXXX  XXXX, XXXX  XXXX  XXXX  - XX/XX/XXXX, XXXX  XXXX  XXXX  - XX/XX/XXXX, XXXX XXXX XXXX  - XX/XX/XXXX These accounts have resulted in several fraudulent hard inquiries and fraudulent collections appearing on my consumer FICO credit report. All of the aforementioned accounts, collections, and hard inquiries are the result of identity theft and fraud. I have attached a copy of FTC Identity Theft Criminal Complaint XXXX as proof from the XXXX Federal Trade Commission that all of the aforementioned consumer credit accounts, collections, and hard inquiries are the result of identity theft and fraud."
+  value: "XXXX i sent a letter to experian to validate all debt or remove from my report and they did not send me information that validated"
+  value: "javitch block llc is a debt collector trying to collect a debt for a third party debt collector named XXXX XXXX XXXX  who bought my alleged debt from XXXX XXXX XXXX XXXX. now they are trying to sue me in XXXX XXXX court for this alleged debt. neither on of these company have a business license to operate in Texas. I never signed a contract with neither one of those companies and I never gave them lawful permission to have my social security number this is identity theft. I also emailed them through their website XXXX and told them I don\'t owe any debt, I called them too but I was on hold for 30 mins with no answer phone number XXXX call and see how long your on hold for an see for yourself. The way I found out I was being sued was thru an advertisement sent to my residence. this is a violation on the FCRA and the FDCPA. They are operating illegal to collect debts and need to be stopped because I\'m in fear of my life and credit worthiness and in fear of wage garnishment for a debt they can\'t prove that is mines. the case number is XXXX in XXXX XXXX. I\'m in fear of my life and need help. there address is XXXX XXXX XXXX XXXX OH XXXX"
+}
+string_domain {
+  name: "Consumer consent provided?"
+  value: "Consent not provided"
+  value: "Consent provided"
+  value: "Consent withdrawn"
+  value: "N/A"
+  value: "Other"
+}
+string_domain {
+  name: "Consumer disputed?"
+  value: "N/A"
+}
+string_domain {
+  name: "Date received"
+  value: "2025-01-24"
+  value: "2025-01-29"
+  value: "2025-02-05"
+  value: "2025-02-11"
+  value: "2025-02-15"
+  value: "2025-02-24"
+  value: "2025-03-06"
+  value: "2025-03-13"
+  value: "2025-03-17"
+  value: "2025-03-21"
+  value: "2025-03-22"
+  value: "2025-03-24"
+  value: "2025-03-25"
+  value: "2025-03-26"
+  value: "2025-04-03"
+  value: "2025-04-04"
+  value: "2025-04-05"
+  value: "2025-04-06"
+  value: "2025-04-07"
+  value: "2025-04-08"
+  value: "2025-04-09"
+  value: "2025-04-10"
+  value: "2025-04-11"
+  value: "2025-04-12"
+  value: "2025-04-14"
+  value: "2025-04-15"
+  value: "2025-04-16"
+  value: "2025-04-17"
+  value: "2025-04-18"
+  value: "2025-04-19"
+  value: "2025-04-20"
+  value: "2025-04-21"
+  value: "2025-04-22"
+  value: "2025-04-23"
+  value: "2025-04-24"
+  value: "2025-04-25"
+  value: "2025-04-26"
+  value: "2025-04-27"
+  value: "2025-04-28"
+  value: "2025-04-29"
+  value: "2025-04-30"
+  value: "2025-05-01"
+  value: "2025-05-02"
+  value: "2025-05-03"
+  value: "2025-05-04"
+  value: "2025-05-05"
+  value: "2025-05-06"
+  value: "2025-05-07"
+  value: "2025-05-08"
+  value: "2025-05-09"
+  value: "2025-05-10"
+  value: "2025-05-11"
+  value: "2025-05-20"
+  value: "2025-05-21"
+  value: "2025-05-23"
+  value: "2025-05-25"
+  value: "2025-05-26"
+  value: "2025-05-27"
+  value: "2025-05-28"
+  value: "2025-05-29"
+  value: "2025-05-30"
+  value: "2025-05-31"
+  value: "2025-06-01"
+  value: "2025-06-02"
+  value: "2025-06-03"
+  value: "2025-06-04"
+  value: "2025-06-05"
+  value: "2025-06-06"
+  value: "2025-06-07"
+  value: "2025-06-08"
+  value: "2025-06-09"
+}
+string_domain {
+  name: "Date sent to company"
+  value: "2025-01-24"
+  value: "2025-01-29"
+  value: "2025-02-05"
+  value: "2025-02-11"
+  value: "2025-02-15"
+  value: "2025-03-13"
+  value: "2025-03-17"
+  value: "2025-03-21"
+  value: "2025-03-22"
+  value: "2025-03-24"
+  value: "2025-03-25"
+  value: "2025-03-26"
+  value: "2025-03-27"
+  value: "2025-04-05"
+  value: "2025-04-06"
+  value: "2025-04-07"
+  value: "2025-04-08"
+  value: "2025-04-09"
+  value: "2025-04-11"
+  value: "2025-04-17"
+  value: "2025-04-18"
+  value: "2025-04-21"
+  value: "2025-04-22"
+  value: "2025-04-23"
+  value: "2025-04-24"
+  value: "2025-04-25"
+  value: "2025-04-26"
+  value: "2025-04-29"
+  value: "2025-05-03"
+  value: "2025-05-04"
+  value: "2025-05-08"
+  value: "2025-05-09"
+  value: "2025-05-13"
+  value: "2025-05-19"
+  value: "2025-05-20"
+  value: "2025-05-21"
+  value: "2025-05-22"
+  value: "2025-05-23"
+  value: "2025-05-25"
+  value: "2025-05-26"
+  value: "2025-05-27"
+  value: "2025-05-28"
+  value: "2025-05-29"
+  value: "2025-05-30"
+  value: "2025-05-31"
+  value: "2025-06-01"
+  value: "2025-06-02"
+  value: "2025-06-03"
+  value: "2025-06-04"
+  value: "2025-06-05"
+  value: "2025-06-06"
+  value: "2025-06-07"
+  value: "2025-06-08"
+  value: "2025-06-09"
+}
+string_domain {
+  name: "Issue"
+  value: "Advertising and marketing, including promotional offers"
+  value: "Applying for a mortgage or refinancing an existing mortgage"
+  value: "Attempts to collect debt not owed"
+  value: "Charged fees or interest you didn\'t expect"
+  value: "Charged upfront or unexpected fees"
+  value: "Closing an account"
+  value: "Closing on a mortgage"
+  value: "Closing your account"
+  value: "Communication tactics"
+  value: "Confusing or misleading advertising or marketing"
+  value: "Confusing or missing disclosures"
+  value: "Credit monitoring or identity theft protection services"
+  value: "Dealing with your lender or servicer"
+  value: "Didn\'t provide services promised"
+  value: "Electronic communications"
+  value: "False statements or representation"
+  value: "Fees or interest"
+  value: "Fraud or scam"
+  value: "Getting a credit card"
+  value: "Getting a loan or lease"
+  value: "Getting the loan"
+  value: "Improper use of your report"
+  value: "Incorrect information on your report"
+  value: "Managing an account"
+  value: "Managing the loan or lease"
+  value: "Opening an account"
+  value: "Other features, terms, or problems"
+  value: "Other transaction problem"
+  value: "Problem caused by your funds being low"
+  value: "Problem when making payments"
+  value: "Problem with a company\'s investigation into an existing issue"
+  value: "Problem with a company\'s investigation into an existing problem"
+  value: "Problem with a lender or other company charging your account"
+  value: "Problem with a purchase or transfer"
+  value: "Problem with a purchase shown on your statement"
+  value: "Problem with additional add-on products or services"
+  value: "Problem with customer service"
+  value: "Problem with fraud alerts or security freezes"
+  value: "Problem with the payoff process at the end of the loan"
+  value: "Problems at the end of the loan or lease"
+  value: "Received a loan you didn\'t apply for"
+  value: "Repossession"
+  value: "Struggling to pay mortgage"
+  value: "Struggling to pay your loan"
+  value: "Struggling to repay your loan"
+  value: "Threatened to contact someone or share information improperly"
+  value: "Took or threatened to take negative or legal action"
+  value: "Trouble accessing funds in your mobile or digital wallet"
+  value: "Trouble during payment process"
+  value: "Trouble using the card"
+  value: "Unable to get your credit report or credit score"
+  value: "Unauthorized transactions or other transaction problem"
+  value: "Unauthorized withdrawals or charges"
+  value: "Vehicle was repossessed or sold the vehicle"
+  value: "Written notification about debt"
+}
+string_domain {
+  name: "Product"
+  value: "Checking or savings account"
+  value: "Credit card"
+  value: "Credit reporting or other personal consumer reports"
+  value: "Debt collection"
+  value: "Debt or credit management"
+  value: "Money transfer, virtual currency, or money service"
+  value: "Mortgage"
+  value: "Payday loan, title loan, personal loan, or advance loan"
+  value: "Prepaid card"
+  value: "Student loan"
+  value: "Vehicle loan or lease"
+}
+string_domain {
+  name: "State"
+  value: "AA"
+  value: "AE"
+  value: "AK"
+  value: "AL"
+  value: "AP"
+  value: "AR"
+  value: "AZ"
+  value: "CA"
+  value: "CO"
+  value: "CT"
+  value: "DC"
+  value: "DE"
+  value: "FL"
+  value: "GA"
+  value: "HI"
+  value: "IA"
+  value: "IL"
+  value: "IN"
+  value: "KS"
+  value: "KY"
+  value: "LA"
+  value: "MA"
+  value: "MD"
+  value: "ME"
+  value: "MI"
+  value: "MN"
+  value: "MO"
+  value: "MS"
+  value: "MT"
+  value: "NC"
+  value: "NE"
+  value: "NH"
+  value: "NJ"
+  value: "NM"
+  value: "NV"
+  value: "NY"
+  value: "OH"
+  value: "OK"
+  value: "OR"
+  value: "PA"
+  value: "PR"
+  value: "RI"
+  value: "SC"
+  value: "SD"
+  value: "TN"
+  value: "TX"
+  value: "UT"
+  value: "VA"
+  value: "VI"
+  value: "WA"
+  value: "WI"
+  value: "WV"
+}
+string_domain {
+  name: "Sub-issue"
+  value: "Account information incorrect"
+  value: "Account reinstatement or redemption after repossession"
+  value: "Account status incorrect"
+  value: "Application denied"
+  value: "Applying for or obtaining a modification, forbearance plan, short sale, or deed-in-lieu"
+  value: "Attempted to collect wrong amount"
+  value: "Banking errors"
+  value: "Called before 8am or after 9pm"
+  value: "Can\'t close your account"
+  value: "Can\'t get other flexible options for repaying your loan"
+  value: "Card company isn\'t resolving a dispute about a purchase or transfer"
+  value: "Card opened without my consent or knowledge"
+  value: "Card was charged for something you did not purchase with the card"
+  value: "Cashing a check"
+  value: "Charged for a purchase or transfer you did not make with the card"
+  value: "Charged too much interest"
+  value: "Confusing or misleading advertising about the credit card"
+  value: "Confusing or misleading advertising or marketing"
+  value: "Contacted you after you asked them to stop"
+  value: "Credit card company isn\'t resolving a dispute about a purchase on your statement"
+  value: "Credit denial"
+  value: "Credit inquiries on your report that you don\'t recognize"
+  value: "Damage caused or loss of personal items in vehicle during the actual repossession"
+  value: "Debt is not yours"
+  value: "Debt was already discharged in bankruptcy and is no longer owed"
+  value: "Debt was paid"
+  value: "Debt was result of identity theft"
+  value: "Delays with the closing process"
+  value: "Deposits and withdrawals"
+  value: "Didn\'t receive enough information to verify debt"
+  value: "Didn\'t receive notice of right to dispute"
+  value: "Didn\'t receive services that were advertised"
+  value: "Didn\'t receive terms that were advertised"
+  value: "Difficulty submitting a dispute or getting information about a dispute over the phone"
+  value: "Escrow, taxes, or insurance"
+  value: "Fees charged"
+  value: "Foreclosure"
+  value: "Frequent or repeated calls"
+  value: "Frequent or repeated messages"
+  value: "Funds not handled or disbursed as instructed"
+  value: "High-pressure sales tactics"
+  value: "Information belongs to someone else"
+  value: "Information is incorrect"
+  value: "Information is missing that should be on the report"
+  value: "Investigation took more than 30 days"
+  value: "Late or other fees"
+  value: "Loan sold or transferred to another company"
+  value: "Notice to repossess"
+  value: "Notification didn\'t disclose it was an attempt to collect a debt"
+  value: "Old information reappears or never goes away"
+  value: "Other problem"
+  value: "Other problem getting your report or credit score"
+  value: "Overcharged for something you did purchase with the card"
+  value: "Payment process"
+  value: "Personal information incorrect"
+  value: "Private mortgage insurance (PMI)"
+  value: "Problem accessing account"
+  value: "Problem canceling credit monitoring or identify theft protection service"
+  value: "Problem during payment process"
+  value: "Problem getting your free annual credit report"
+  value: "Problem using a debit or ATM card"
+  value: "Problem with additional products or services purchased with the loan"
+  value: "Problem with customer service"
+  value: "Problem with fees"
+  value: "Problem with forgiveness, cancellation, or discharge"
+  value: "Problem with personal statement of dispute"
+  value: "Problem with the interest rate"
+  value: "Public record information inaccurate"
+  value: "Received bad information about your loan"
+  value: "Received unwanted marketing or advertising"
+  value: "Reporting company used your report improperly"
+  value: "Sent card you never applied for"
+  value: "Sued you in a state where you do not live or did not sign for the debt"
+  value: "Talked to a third-party about your debt"
+  value: "Their investigation did not fix an error on your report"
+  value: "Threatened or suggested your credit would be damaged"
+  value: "Transaction was not authorized"
+  value: "Trouble using the card to spend money in a store or online"
+  value: "Trouble with how payments are being handled"
+  value: "Trying to communicate with the company to fix an issue related to modification, forbearance, short sale, deed-in-lieu, bankruptcy, or foreclosure"
+  value: "Trying to communicate with the company to fix an issue while managing or servicing your loan"
+  value: "Trying to communicate with the company to fix an issue with the application process"
+  value: "Trying to communicate with the company to fix an issue with the loan closing"
+  value: "Unable to receive car title or other problem after the loan is paid off"
+  value: "Unexpected increase in interest rate"
+  value: "Used obscene, profane, or other abusive language"
+  value: "Was not notified of investigation status or results"
+  value: "You told them to stop contacting you, but they keep trying"
+}
+string_domain {
+  name: "Sub-product"
+  value: "Auto debt"
+  value: "Checking account"
+  value: "Conventional home mortgage"
+  value: "Credit card debt"
+  value: "Credit repair services"
+  value: "Credit reporting"
+  value: "Debt settlement"
+  value: "Domestic (US) money transfer"
+  value: "FHA mortgage"
+  value: "Federal student loan servicing"
+  value: "Foreign currency exchange"
+  value: "General-purpose credit card or charge card"
+  value: "General-purpose prepaid card"
+  value: "Government benefit card"
+  value: "Home equity loan or line of credit (HELOC)"
+  value: "I do not know"
+  value: "Installment loan"
+  value: "International money transfer"
+  value: "Lease"
+  value: "Loan"
+  value: "Medical debt"
+  value: "Mobile or digital wallet"
+  value: "Other banking product or service"
+  value: "Other debt"
+  value: "Other personal consumer report"
+  value: "Other type of mortgage"
+  value: "Payday loan"
+  value: "Payday loan debt"
+  value: "Personal line of credit"
+  value: "Private student loan"
+  value: "Private student loan debt"
+  value: "Rental debt"
+  value: "Reverse mortgage"
+  value: "Savings account"
+  value: "Store credit card"
+  value: "Telecommunications debt"
+  value: "Title loan"
+  value: "Virtual currency"
+}
+string_domain {
+  name: "Submitted via"
+  value: "Phone"
+  value: "Postal mail"
+  value: "Referral"
+  value: "Web"
+}
+string_domain {
+  name: "Tags"
+  value: "Older American"
+  value: "Older American, Servicemember"
+  value: "Servicemember"
+}
+string_domain {
+  name: "Timely response?"
+  value: "No"
+  value: "Yes"
+}
